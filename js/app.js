@@ -160,6 +160,12 @@ const citaObj = {
     hora: '',
     sintomas: ''
 }
+// Agrega datos al Objeto de Cita
+function datosCita(e) {
+    // console.log(e.target.name);
+    citaObj[e.target.name] = e.target.value;
+    // console.log(citaObj);
+}
 /*
 Este es el manejador de eventos para el envío del formulario. Se encarga de validar los campos del formulario y
 luego agregar una nueva cita o editar una cita existente, según corresponda.
