@@ -160,11 +160,25 @@ const citaObj = {
     hora: '',
     sintomas: ''
 }
-// Agrega datos al Objeto de Cita
+// Función que agrega datos al objeto de cita
 function datosCita(e) {
-    // console.log(e.target.name);
+    /*
+    El evento "e" es el objeto del evento que contiene información
+    sobre el evento que fue disparado, en este caso, un evento "input"
+    "e.target" se refiere al elemento del DOM que disparó el evento, es decir,
+    el campo de input que está siendo llenado en el formulario
+    "e.target.name" nos da el nombre del elemento que disparó el evento
+    es decir, el nombre del campo del input, este nombre coincide con la
+    clave correspondiente en el objeto "citaObj"
+    "e.target.value" es el valor actual del campo de input
+    así que aquí estamos estableciendo el valor de la clave correspondiente
+    en el objeto "citaObj" al valor actual del campo de input
+    */
     citaObj[e.target.name] = e.target.value;
-    // console.log(citaObj);
+    /*
+    De esta manera, mientras el usuario llena los campos de input en el formulario,
+    los valores se están guardando en tiempo real en el objeto "citaObj"
+    */
 }
 /*
 Este es el manejador de eventos para el envío del formulario. Se encarga de validar los campos del formulario y
